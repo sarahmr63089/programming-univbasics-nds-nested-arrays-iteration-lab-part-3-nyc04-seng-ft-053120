@@ -6,7 +6,7 @@ def join_nested_strings(src)
   while count < src.length do
     inner_count = 0
     while inner_count < src[count].length do
-      if src[count][inner_count].is_a? (String)
+      if src[count][inner_count].include? (0..9)
         array_of_strings << src[count][inner_count]
       end
       inner_count += 1
